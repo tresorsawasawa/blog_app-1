@@ -1,24 +1,64 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> We create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby on Rails
 
-* System dependencies
+## Live Demo (if available)
 
-* Configuration
+[Live Demo Link](https://livedemo.com)
 
-* Database creation
+## Getting Started
 
-* Database initialization
+### Get a local copy
 
-* How to run the test suite
+- git clone the project
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+git clone https://github.com/jaflih/blog_app.git
+```
 
-* Deployment instructions
+```
+cd blog_app
+```
 
-* ...
+### Run the app
+
+- To run the app
+
+```
+rails s
+```
+
+```
+Visit http://localhost:3000/ in your browser.
+```
+
+## Authors
+
+👤 **Jaflih**
+
+- GitHub: [@githubhandle](https://github.com/jaflih)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jaflih/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
