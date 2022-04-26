@@ -36,6 +36,14 @@ rails s
 Visit http://localhost:3000/ in your browser.
 ```
 
+### Run the tests
+
+- To run the tests
+
+```
+rspec spec/requests/
+```
+
 ## Authors
 
 👤 **Jaflih**
