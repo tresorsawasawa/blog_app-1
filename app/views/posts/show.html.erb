@@ -1,15 +1,12 @@
 <div class="bloc_posts">
    <div class="bloc_user_posts">
       <div class="bloc_user_post">
-          <h4>Post #1  </h4>
-          <div class="user_post_content_comments">Comment: x, Likes : x</div>
+          <h4><%= @post.title %>  </h4>
+          <div class="user_post_content_comments">Comment: <%= @post.comments_counter %>, Likes : <%= @post.likes_counter %></div>
+          <div class="user_post_content"> <%= @post.text %> </div>
+      </div>
 
-          <div class="user_post_content">Donec fermentum, arcu non pulvinar viverra, lacus nisi faucibus tellus, ac hendrerit enim lectus eget nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius sodales ante, at ullamcorper justo posuere ut. Cras rutrum non risus eu vestibulum. Pellentesque dolor mauris, convallis in feugiat at, pellentesque ut sapien. Suspendisse tempor elementum augue, placerat pellentesque felis accumsan non. Vestibulum placerat metus sit amet orci fringilla condimentum. Mauris eu metus porttitor justo lacinia iaculis in at erat. In a pellentesque nisi, sit amet gravida dolor. Quisque at urna erat. Vestibulum sed massa ornare, tempor tortor eget, suscipit augue. Fusce commodo pharetra magna ut tristique. Suspendisse vulputate sodales hendrerit. Quisque dignissim tortor sit amet dui convallis, et semper purus ultrices. Curabitur lectus est, cursus vitae aliquam eget, rutrum in metus. Suspendisse ut tellus vel libero aliquam semper. Integer lacus est, fringilla non posuere non, sagittis at ex. </div>
-      </div>
-      <div class="bloc_user_post_comments">
-            <% for i in 1..10 do %>
-                <div>Username: Comment <%= i %> </div>
-            <% end %>
-      </div>
+      <%= render partial: "comment", locals: { post: @post, comments: @post.comments  } %>
+
   </div>
 </div>
