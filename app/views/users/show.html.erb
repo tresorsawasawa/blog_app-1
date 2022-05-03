@@ -13,7 +13,7 @@
    <div class="bloc_user_posts">
     <%  @user.recent_posts.each do |post|%>
       <div class="bloc_user_post">
-          <h4><%= post.title %> </h4>
+          <h4><a href="<%= @user.id%>/posts/<%= post.id%>"><%= post.title %></a> </h4>
           <div class="user_post_content"><%= post.text %> </div>
           <div class="user_post_content_comments">Comment: <%= post.comments_counter %>, Likes : <%= post.likes_counter %></div>
       </div>
