@@ -2,24 +2,13 @@
   <div class="bloc_user">
       <div class="user_image"></div>
       <div class="user_data"> 
-        <div class="user_name"><h3>User name</h3></div>
-        <div class="user_posts">Number of posts: x</div>
+        <div class="user_name"><h3><%= @user.name%></h3></div>
+        <div class="user_posts">Number of posts: <%= @user.posts_counter%></div>
       </div>
   </div>
 
-   <% for j in 1..2 do %>
-   <div class="bloc_user_posts">
-      <div class="bloc_user_post">
-          <h4>Post #<%= j %>  </h4>
-          <div class="user_post_content">Donec fermentum, arcu non pulvinar viverra, lacus nisi faucibus tellus, ac hendrerit enim lectus eget nulla. </div>
-          <div class="user_post_content_comments">Comment: x, Likes : x</div>
-      </div>
-      <div class="bloc_user_post_comments">
-            <% for i in 1..5 do %>
-                <div>Username: Comment <%= i %> </div>
-            <% end %>
-      </div>
-  </div>
+  <% @user.posts.each do |post| %>
+      <%= render partial: "post", locals: { post: post } %>
   <% end %>
 
   <button class="pagination"> Pagination</button>

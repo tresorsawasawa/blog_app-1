@@ -1,0 +1,5 @@
+<div class="bloc_user_post_comments">
+    <% comments.each do |comment| %>
+        <div><%= comment.author.name %>: <%= comment.text %> </div>
+    <% end %>
+</div>
