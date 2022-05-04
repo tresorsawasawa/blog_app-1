@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @user = User.find(1)
+    @user = current_user
   end
 
   def create

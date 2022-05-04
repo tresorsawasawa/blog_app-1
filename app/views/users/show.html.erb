@@ -13,11 +13,15 @@
    <div class="bloc_user_posts">
     <%  @user.recent_posts.each do |post|%>
       <div class="bloc_user_post">
-          <h4><a href="<%= @user.id%>/posts/<%= post.id%>"><%= post.title %></a> </h4>
+          <%= link_to user_post_path(@user) do %>
+            <h4><%= post.title %></h4>
+          <% end %>
           <div class="user_post_content"><%= post.text %> </div>
           <div class="user_post_content_comments">Comment: <%= post.comments_counter %>, Likes : <%= post.likes_counter %></div>
       </div>
     <% end %>
   </div>
-  <a href="<%= @user.id%>/posts" class="see_posts"> See all posts</a>
+
+  <%= link_to 'See all posts', user_posts_path(@user) , class: "see_posts"%>
+
 </div>
