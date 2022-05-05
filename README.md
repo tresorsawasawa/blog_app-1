@@ -54,7 +54,7 @@ Visit http://localhost:3000/ in your browser.
 - To run the tests
 
 ```
-rspec spec/requests/
+rspec spec/models
 ```
 
 ## Authors
