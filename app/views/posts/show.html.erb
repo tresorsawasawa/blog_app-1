@@ -9,4 +9,9 @@
       <%= render partial: "comment", locals: { post: @post, comments: @post.comments  } %>
 
   </div>
+
+  <%= button_to "Add new Comment", new_user_post_comment_path(@post.author, @post), method: :get, class: "pagination" %>
+
+  <%= button_to "Add a like", user_post_likes_path(@post.author, @post), class: "pagination" %>
+
 </div>
