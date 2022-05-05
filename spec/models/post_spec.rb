@@ -20,10 +20,10 @@ RSpec.describe Post, type: :model do
   end
 
   it 'should have title max length 250' do
-    @post.title = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    @post.title = 'a' * 251
     expect(@post).to_not be_valid
 
-    @post.title = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+    @post.title = 'b' * 250
     expect(@post).to be_valid
   end
 
