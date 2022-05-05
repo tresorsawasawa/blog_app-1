@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
+    flash[:notice] = 'You have successfully created a new post.'
     redirect_to { user_posts(current_user) }
   end
 

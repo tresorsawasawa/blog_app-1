@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
   def create
     post = Post.find(params[:post_id])
     Comment.create(post_params(post))
+    flash[:notice] = 'You have successfully created a comment.'
     redirect_to user_post_path(current_user, post)
   end
 
