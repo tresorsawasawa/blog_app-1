@@ -30,4 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: 'Hello world'
+  like_title: 'Add new like'
+  nb_post: 'Number of posts:'
+  post_title: 'Add new post'

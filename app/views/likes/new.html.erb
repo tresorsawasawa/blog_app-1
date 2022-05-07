@@ -1,4 +1,4 @@
-<h2> Add new Like </h2>
+<h2> <%= t('.like_title') %> </h2>
 
 <%= form_with(model: @like, url: user_post_likes_path) do |form| %>
   <%= form.submit "Add new like" %>
