@@ -64,6 +64,11 @@ rspec spec/models
 - GitHub: [@githubhandle](https://github.com/jaflih)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jaflih/)
 
+Edward Yara :student: 
+- GitHub: [@oluyaratosin123](https://github.com/oluyaratosin123)
+- Twitter: [@TOluyara](https://twitter.com/TOluyara)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/edward-oluyara/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
