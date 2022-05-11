@@ -19,7 +19,6 @@ class CommentsController < ApplicationController
 
   def destroy
     comment = Comment.find(params[:id])
-    comment.post.comments_counter = comment.post.comments_counter - 1
     comment.destroy
     redirect_to { user_posts(current_user) }
   end

@@ -13,5 +13,9 @@
 
   <button class="pagination"> Pagination</button>
   <br/>
-  <%= button_to "Add new Post", new_user_post_path(@user), method: :get, class: "pagination" %>
+
+   <% if current_user %>
+      <%= button_to "Add new Post", new_user_post_path(@user), method: :get, class: "pagination" %>
+<% end %>
+
 </div>
