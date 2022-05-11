@@ -14,4 +14,8 @@
 
   <%= button_to "Add a like", user_post_likes_path(@post.author, @post), class: "pagination" %>
 
+ <% if can? :destroy, @post %>
+    <%= button_to "Delete the post" ,[@post.author, @post], method: :delete, class: "pagination" %>
+    <% end %>
+</div>
 </div>
