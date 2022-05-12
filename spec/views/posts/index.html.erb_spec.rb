@@ -54,7 +54,8 @@ RSpec.describe 'User post index page', type: :system do
       expect(page).to have_content 'Comment: 1, Likes : 2'
     end
 
-    it 'I can see a section for pagination if there are more posts than fit on the view.' do
+    it 'see a section for pagination.' do
+      expect(page).to have_content 'Pagination'
     end
 
     it 'When I click on a post, it redirects me to that post s show page' do

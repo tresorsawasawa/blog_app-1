@@ -6,10 +6,10 @@ RSpec.describe 'Post show page', type: :system do
       @user = User.create!(name: 'Amy', photo: '#photo_hello', bio: 'My bio #amy !', email: 'amy@test.com',
                            password: 'azerty123', posts_counter: 0)
       @userb = User.create!(name: 'Tomy', photo: '#photo_tomy', bio: 'My bio Tomy !', email: 'tomy@test.com',
-                           password: 'azerty123', posts_counter: 0)
+                            password: 'azerty123', posts_counter: 0)
 
-      @p = Post.create(author: @user, title: "#My Post", text: "This is my first post")
-    
+      @p = Post.create(author: @user, title: '#My Post', text: 'This is my first post')
+
       @c = Comment.create(post: @p, author: @userb, text: 'Hi Amy!')
 
       visit new_user_session_path
@@ -24,7 +24,7 @@ RSpec.describe 'Post show page', type: :system do
     end
 
     it 'I can see the post s title.' do
-      expect(page).to have_content "#My Post"
+      expect(page).to have_content '#My Post'
     end
 
     it 'I can see who wrote the post.' do
@@ -46,6 +46,5 @@ RSpec.describe 'Post show page', type: :system do
     it 'I can see the comment each commentor left.' do
       expect(page).to have_content 'Hi Amy!'
     end
-
   end
 end
