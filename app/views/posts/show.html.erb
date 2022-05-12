@@ -10,8 +10,16 @@
 
   </div>
 
+ <% if current_user %>
   <%= button_to "Add new Comment", new_user_post_comment_path(@post.author, @post), method: :get, class: "pagination" %>
-
   <%= button_to "Add a like", user_post_likes_path(@post.author, @post), class: "pagination" %>
 
+<% end %>
+
+
+
+ <% if can? :destroy, @post %>
+    <%= button_to "Delete the post" ,[@post.author, @post], method: :delete, class: "pagination" %>
+    <% end %>
+</div>
 </div>
