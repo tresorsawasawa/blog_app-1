@@ -1,0 +1,18 @@
+<h2>API --- Add comment </h2>
+
+<%= form_with(model: @comment, url: api_create_comment_path(@user,@post)) do |f| %>
+  <div class="field">
+    <%= f.label :token %><br />
+    <%= f.text_field :token %>
+  </div>
+
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </div>
+
+  <%= f.submit "Add comment" %>
+<% end %>
+
+
+
