@@ -1,7 +1,7 @@
 <div class="bloc_posts">
    <div class="bloc_user_posts">
       <div class="bloc_user_post">
-          <h4><%= @post.title %>  </h4>
+          <h4><%= @post.title %> by <%= @post.author.name %> </h4>
           <div class="user_post_content_comments">Comment: <%= @post.comments_counter %>, Likes : <%= @post.likes_counter %></div>
           <div class="user_post_content"> <%= @post.text %> </div>
       </div>
