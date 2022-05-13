@@ -11,12 +11,10 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
-    get 'authentication' , to: 'authentication#new'
     post 'authentication/create' , to: 'authentication#create'
     get 'users/:id/posts', to: 'apiposts#index'
-    get 'users/:user_id/posts/:id/comments', to: 'apicomments#index', as: 'comments'
-    get 'users/:user_id/posts/:id/comments/new', to: 'apicomments#new'
-    post 'users/:user_id/posts/:id/comments/create', to: 'apicomments#create', as: 'create_comment'
+    get 'posts/:id/comments', to: 'apicomments#index', as: 'comments'
+    post 'posts/:id/comments/create', to: 'apicomments#create', as: 'create_comment'
   end
 
 end
