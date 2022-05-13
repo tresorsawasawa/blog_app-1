@@ -87,7 +87,7 @@ GET localhost:3000/api/posts/:id_post/comments
 #### Add a comment to a post :
 
 ```
-POST localhost:3000/api/users/:user_id/posts/:id/comments/create
+POST localhost:3000/api/posts/:id/comments/create
 post parameters:
  - token
  - text
