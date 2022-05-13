@@ -1,5 +1,6 @@
 class Api::ApicommentsController < ApplicationController
   before_action :authenticate, only: [:create]
+  skip_before_action :verify_authenticity_token
 
   def index
     return unless User.exists?(params[:user_id])
