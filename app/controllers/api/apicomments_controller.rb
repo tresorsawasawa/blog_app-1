@@ -20,7 +20,7 @@ class Api::ApicommentsController < ApplicationController
     return unless User.exists?(params[:user_id])
     return unless Post.exists?(params[:id])
 
-    Comment.create(post_id: params[:id], author_id: params[:user_id], text: params[:comment][:text])
+    Comment.create(post_id: params[:id], author_id: params[:user_id], text: params[:text])
     @comments = Comment.where(post_id: params[:id], author_id: @user_logged.id)
     redirect_to api_comments_path(user_id: params[:user_id], id: params[:id])
   end
@@ -28,7 +28,7 @@ class Api::ApicommentsController < ApplicationController
   private
 
   def authenticate
-    token = JsonWebToken.decode(params[:comment][:token])
+    token = JsonWebToken.decode(params[:token])
     user_id = token['user_id']
     return unless User.exists?(user_id)
 

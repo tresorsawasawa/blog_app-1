@@ -63,19 +63,21 @@ rspec spec/views
 
 ### USING THE API
 
-#### Authentication : 
+#### Authentication :
 
 ```
-  POST localhost:3000/api/authentication/create  
-  post parameters : user[email] and user[password]
+  POST localhost:3000/api/authentication/create
+  post parameters : email and password
 ```
 
 #### List all posts for a user :
+
 ```
 GET localhost:3000/api/users/:id_user/posts
 ```
 
 #### List all comments for a user's post :
+
 ```
 GET localhost:3000/api/users/:user_id/posts/:id_post/comments
 ```
@@ -84,24 +86,8 @@ GET localhost:3000/api/users/:user_id/posts/:id_post/comments
 
 ```
 POST localhost:3000/api/users/:user_id/posts/:id/comments/create
-post parameters: comment[token] and comment[text]
+post parameters: token and text
 ```
-
-#### Forms
-
-To facilitate the application, you can find 2 forms :
-
-- one for authenticating :
-```
-localhost:3000/api/authentication
-```
-
-- one for creating a comment
-```
-localhost:3000/api/users/:user_id/posts/:id/comments/new
-```
-
-
 
 ## Authors
 
