@@ -8,9 +8,9 @@ class Api::AuthenticationController < ApplicationController
 
   def create
     user = User.find_by(email: params[:user][:email])
-    return if user.nil?
+    return if user.nil? || !user.valid_password?(params[:user][:password])
 
-    token = JsonWebToken.encode({ user_id: user.id })
-    render json: { token: }, status: :created
+    token_encode = JsonWebToken.encode({ user_id: user.id })
+    render json: { token: token_encode }, status: :created
   end
 end
